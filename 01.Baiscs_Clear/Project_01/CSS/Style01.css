@@ -1,4 +1,13 @@
 
+/* ----------------------------- LAYOUT SECTION --------------------------------- */
+
+/* Body section here it would act as an parent element
+
+1. All the property's by default are inderited by it's childern which mean all.
+
+2. We can override them to set as per our needs.
+
+*/
 body
 {
     margin: 0px;
@@ -7,12 +16,16 @@ body
     font-size: 14px;   
 }
 
+/* ----------------------------------------------- HEADER SECTION STYLING ------------------------------------------------------ */
+
 #header{
-    background-color: #f5d900;
+    background-color: #141E46;
     height:90px;
     border-radius: 5px;
     margin: 10px;
 }
+
+/* ---------------------------------------------- NAVIGATION BAR STYLING ------------------------------------------------------- */
 
 #navigation
 {
@@ -21,6 +34,8 @@ body
     background-color:#D80032;
     margin: 10px;
 }
+
+/* ----------------------------------------------- MAIN SECTIOn STYLING ------------------------------------------------------- */
 
 #main
 {
@@ -31,42 +46,79 @@ body
     font-weight: lighter;
     padding:10px;
     text-align: left;
-    margin-left:300px;
+    margin-left:290px;
+    /* But wht 300 px inspecific -> as we know we need to accomidate the elements on the left pane on the screen we need to create the roon
+    for them so left pane elements will have cetain dimensions let it be x so when our main element wanted to be placed side by it
+    it should not overlap on it the insertion should be done precise for which we need to exclude the space x of our main in the direction
+    where element exist (x is calculated by width + margin + padding -> 250px width + margin(left,right) 20px+ padding(left,right) 20px)
+    -> 290 px */
 }
+
+/* ----------------------------------------------- SIDE PANE STYLING ---------------------------------------------------------- */
 
 #side_left
 {
     float: left;    
+    /* To set a element to a paricular side of the web page and it will push it out of the flow */
     width:250px;
+    /* When float is used we should use width property as well */
     color:#A73121;
     background-color: #F2E8C6;
     padding:10px;
     border-radius: 5px;
     margin: 10px;
     margin-top:0px;
-    clear:left;
+    /* The margin wouldn't be merged like happends between 2 divs if they have bottom 10 and top 10 both will be merged to 10 not 20
+    but this wouldn't be the case in the float elements so we need to deduce it manually to fit the symmentry */
+    clear:both;
+    /* Clear property will define the postion of the element places side to the floated element's so we can specify the side to make sure
+    no elements are placed on that side */
 }
+
+/* -------------------------------------------- HEADING STYLING --------------------------------------------------------------- */
 
 h1
 {
+    /* Will bve applied to all h1 elements in the web page */
     font-size: 120%;
+    /* The basic size for the font has been taken reference from the body element's font size and we are saying it should be 120% of it 
+    -> fontsize = 1.2*parent_fontsize */
     color: #032c41;
 }
+
+/* -------------------------------------------IMAGE PRESENT IN THE LEFT PANE STYLING ------------------------------------------- */
+
 #side_left_img
 {
     float: left;    
-    clear:left;   
+    clear:both;   
     width:270px;
     border-radius: 50px;
     margin: 10px;
     margin-top:0px;
     /* display: none; */
+    /* This property will give use smooth transtion of the elements from one state to another as desired with the modification of the 
+    animation type -> speeds during start , center , end and duration of the animation */
     transition:opacity ease 0.5s;
 }
 
+/* ------------------------------------------ Hover Styling for the Image element in Left Pane -------------------------------- */
+
 #side_left_img:hover
+/* Pseudo class element hover to control the hover action when we hover on the element  */
 {
+    /* Here upon hovering the opacity will be reduced to the 0.1 from 1.0 */
     opacity: 0.1;
+}
+
+/* ----------------------------------------- Footer Styling ------------------------------------------------------------------ */
+
+#footer
+{
+    background-color: #176B87;
+    height:90px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 
