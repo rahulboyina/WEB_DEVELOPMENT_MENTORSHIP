@@ -27,12 +27,61 @@ body
 
 /* ---------------------------------------------- NAVIGATION BAR STYLING ------------------------------------------------------- */
 
-#navigation
+/* #navigation
 {
     height: 35px;
     border-radius: 5px;
     background-color:#D80032;
     margin: 10px;
+} */
+/*
+ Have commented this thing out as if this exist then the other property ul>li wouldn't work as expected we want box model for ul not div
+ */
+/* ------------------------------------- Naviagation Menu UL ---------------------------------------------------------------------- */
+
+#navigation ul
+
+{
+    border-radius: 5px;
+    background-color: #000;
+    text-align:center;
+    padding: 5px;
+    margin:10px;
+    list-style-type:none;
+    border:1px solid red;
+}
+
+/* ------------------------------- Navigation Menu LI----------------------------------------------------------------------------- */
+
+#navigation ul>li
+{
+    /* border: 1px solid #05BFDB; */
+    width:100px;
+    /* No use in inline element */
+    /* margin: auto; */
+    /* Marign value as auto will center the element */
+    margin-top:3px;
+    display: inline;
+    /* This inline property will make them go side by side rather than top down and width and height don't work in INLINE element */
+    padding: .2em 1em;
+    
+}
+
+/* ------------------------------ Styling Naviagation Menu links with in LI element --------------------------------------------- */
+
+#navigation ul>li>a
+{
+    text-decoration: none;
+    color: white;
+}
+
+/* ------------------------------ Hovering Effect on the element's navigation element's ---------------------------------------- */
+
+#navigation ul>li>a:hover
+{
+    text-decoration:double;
+    color: black;
+    background-color: white;
 }
 
 /* ----------------------------------------------- MAIN SECTIOn STYLING ------------------------------------------------------- */
@@ -86,6 +135,16 @@ h1
     color: #032c41;
 }
 
+h3
+{
+    font-family: 'Chakra Petch', sans-serif;
+    /* font-family: 'Fuggles', cursive;  */
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
 /* -------------------------------------------IMAGE PRESENT IN THE LEFT PANE STYLING ------------------------------------------- */
 
 #side_left_img
@@ -121,4 +180,33 @@ h1
     margin: 10px;
 }
 
+#footer p
+{
+    text-align: center;
+    font-size: 90%;
+    /* padding:10px; */
+    /* border:1px solid red; */
+    margin-top: 10px;
+}
+
+#footer>ul
+{
+    padding-top:30px;
+    /* border:1px solid red; */
+    margin-top: 10px;
+    text-align: center;
+}
+
+#footer li
+{
+
+    list-style-type: none;
+    display: inline;
+    padding:.2em 1em;
+}
+
+#footer a
+{
+    text-decoration: none;
+}
 
