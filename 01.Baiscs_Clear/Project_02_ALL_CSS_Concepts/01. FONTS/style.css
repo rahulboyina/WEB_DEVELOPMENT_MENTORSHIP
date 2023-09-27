@@ -1,0 +1,22 @@
+#ff
+{
+    font-family: monospace;
+}
+
+
+#fs
+{
+    font-size: xx-large;
+}
+
+#clr
+{
+    color:green;
+}
+
+#t1{font-weight:lighter;}
+#t2{font-weight:normal;}
+#t3{font-weight:bold;}
+#t4{font-weight:bolder;}
+
+#fsty{font-style: italic;}
